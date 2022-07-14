@@ -1,0 +1,53 @@
+body {
+    background-color: grey;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+}
+h3 {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.basic {
+    display: block;
+    position:absolute;
+    width: calc(100% - 500px);
+    height: 100%;
+    left: 500px;
+    top: 0;
+}
+
+.filter {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+}
+
+.filter_element {
+    display: inline-block;
+    font-size: 20px;
+    width: 245px;
+}
+
+.filter_text_element {
+    display: inline-block;
+    font-size: 20px;
+    margin: 15px 0;
+    width: 50px;
+    text-align: center;
+}
+
+.filter_input_element {
+    display: inline-block;
+    width: 180px;
+    margin: 0;
+}
