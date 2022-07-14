@@ -7,7 +7,7 @@
     <title>My Database</title>
 </head>
 <body>
-    <div class="filter">
+    <form class="filter" onchange="change()" id="filter" >
         <h2 сlass="filter_title">Фильтр</h2>
         <h3>Цена</h3>
         <div class="filter_block">
@@ -36,7 +36,7 @@
             </div>
             <div class="filter_element">
                 <input type="checkbox" name="tram" id="tram"/>
-                <label for="tram">Трамваи</label>
+                <label for="tram">Трамвай</label>
             </div>
             <div class="filter_element">
                 <input type="checkbox" name="trolleybus" id="trolleybus"/>
@@ -70,41 +70,34 @@
                 <label for="Electro">Электро</label>
             </div>
         </div>
-        <h3>Тип кузова</h3>
+        <h3>Коробка передач</h3>
         <div class="filter_block">
             <div class="filter_element">
-                <input type="checkbox" name="sedan" id="sedan"/>
-                <label for="sedan">Седан</label>
+                <input type="checkbox" name="manual" id="manual"/>
+                <label for="manual">Механическая</label>
             </div>
             <div class="filter_element">
-                <input type="checkbox" name="hatchback" id="hatchback"/>
-                <label for="hatchback">Хетчбек</label>
+                <input type="checkbox" name="automatic" id="automatic"/>
+                <label for="automatic">Автоматическая</label>
             </div>
             <div class="filter_element">
-                <input type="checkbox" name="suv" id="suv"/>
-                <label for="suv">Внедорожник</label>
+                <input type="checkbox" name="robotic" id="robotic"/>
+                <label for="robotic">Роботизированная</label>
             </div>
             <div class="filter_element">
-                <input type="checkbox" name="wagon" id="wagon"/>
-                <label for="wagon">Универсал</label>
-            </div>
-            <div class="filter_element">
-                <input type="checkbox" name="coupe" id="coupe"/>
-                <label for="coupe">Купе</label>
-            </div>
-            <div class="filter_element">
-                <input type="checkbox" name="van" id="van"/>
-                <label for="van">Фургон</label>
-            </div>
-            <div class="filter_element">
-                <input type="checkbox" name="cabriolet" id="cabriolet"/>
-                <label for="cabriolet">Кабриолет</label>
+                <input type="checkbox" name="variator" id="variator"/>
+                <label for="variator">Вариатор</label>
             </div>
         </div>
-    </div>
+    </form>
     <div class="basic">
-
+        <h2 сlass="filter_title">Товары</h2>
+        <table id="mainDiv" class="mainDiv">
+        </table>
     </div>
+    
     <link rel="stylesheet" href="styles/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
