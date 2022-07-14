@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: #b6b6b6;
 }
 
 h2 {
@@ -20,7 +20,7 @@ h3 {
     min-height: 100%;
     left: 500px;
     top: 0;
-    background-color: aqua;
+    background-color: #327ceb;
 }
 
 .filter {
