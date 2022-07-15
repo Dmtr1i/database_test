@@ -1,14 +1,11 @@
-function start() {
-    $.ajax({
-        url: '../database/data.php',
-        method: 'get',
-        headers: {'type': 'start'},
-        success: function(data) {
-            print(JSON.parse(data));
-            //console.log(data);
-        }
-    });  
-}
+$.ajax({
+    url: '../database/data.php',
+    method: 'get',
+    headers: {'type': 'start'},
+    success: function(data) {
+        print(JSON.parse(data));
+    }
+});  
 
 function change() {
     var form = document.forms.filter.elements;
@@ -40,7 +37,6 @@ function change() {
         cache: false,
         success: function(data) {
             print(JSON.parse(data));
-            //console.log(data);
         }
     });
 }
@@ -71,7 +67,7 @@ function print(data) {
     td4.textContent = 'Коробка передач';
     tr0.append(td4);
     doc.append(tr0);
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < Object.keys(data).length; i++) {
         var tr = document.createElement('tr');
         tr.className = 'product';
         for (var j = 0; j < 5; j++) {
@@ -83,5 +79,3 @@ function print(data) {
         doc.append(tr);
     }
 }
-
-start();

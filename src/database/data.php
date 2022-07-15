@@ -24,7 +24,6 @@
         }
 
         public function filter($criteria) {
-            
             $this->updateDataBase();
             $data = $this->data;
             $temp = [];
@@ -76,13 +75,6 @@
             return $criteria['classes'];
         }
 
-
-
-
-
-
-
-
         private function printToFile() {
             foreach ($this->data as $el){
                 $temp = $el[0].' '.$el[1].' '.$el[2].' '.$el[3].' '.$el[4].PHP_EOL;
@@ -92,7 +84,7 @@
 
         public function getDataBase() {
             if (!file_get_contents($this->filename)) {
-                $this->fillDatabase(100);
+                $this->fillDatabase(1000);
                 return $this->data;
             }
             return $this->updateResult(explode(PHP_EOL, file_get_contents($this->filename)));
